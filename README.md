@@ -46,10 +46,7 @@ equal
 *********************************************************************************************
 
 Assumptions:
-words longer than 13 characters will not be wrapped.
-ambiguity: example contains a possible error at line 15 ('years ago our') - a blank space is a character
+words longer than <limit> (for this case that's 13) characters will not be wrapped.
 Not tested with input larger than 12kb.
 WordWrapClient has a hardcoded test file included in the resources directory.
-
 Project is a Java 1.8 maven repo.
-
