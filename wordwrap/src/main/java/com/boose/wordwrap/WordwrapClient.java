@@ -5,7 +5,6 @@
  */
 package com.boose.wordwrap;
 
-import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -19,7 +18,6 @@ import java.util.logging.Logger;
 public class WordwrapClient {
     private static final Logger log = Logger.getLogger(WordwrapClient.class.getName());
     public static void main(String[] args) {
-    System.out.println("working dir:" + System.getProperty("user.dir"));
         String filename = "src\\main\\resources\\testfile.txt";
         String wrapCandidate = null;
         try {
@@ -30,8 +28,8 @@ public class WordwrapClient {
         
         Wordwrap wrapMe = new Wordwrap(wrapCandidate, 13);
         String wrapped = wrapMe.createWrappedText();
-        System.out.println("Before: \n " + wrapCandidate);
-        System.out.println("After wrapping: \n {0}" + wrapped); 
+        log.info("Before: \n " + wrapCandidate);
+        log.info("After wrapping: \n" + wrapped); 
   }
 }
 
